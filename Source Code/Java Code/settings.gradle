@@ -1,0 +1,9 @@
+rootProject.name = 'flat-management-system-backend'
+
+include 'fms-discovery-server'
+include 'fms-api-gateway'
+include 'fms-auth-service'
+include 'fms-society-service'
+include 'fms-finance-service'
+include 'fms-complaint-service'
+include 'fms-communication-service'
