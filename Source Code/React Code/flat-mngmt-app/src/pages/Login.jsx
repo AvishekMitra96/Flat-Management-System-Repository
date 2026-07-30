@@ -1,15 +1,28 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import api from '../api/axios'
 
 export default function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
-    // Mock login
-    navigate('/')
+    setError('')
+    setLoading(true)
+    try {
+      const response = await api.post('/auth/login', { username, password })
+      localStorage.setItem('token', response.data.token)
+      navigate('/')
+    } catch (err) {
+      setError('Invalid credentials or server unavailable.')
+      console.error('Login error:', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -28,6 +41,7 @@ export default function Login() {
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
+          {error && <div className="p-3 bg-red-500/20 border border-red-500/50 text-red-200 rounded-lg text-sm">{error}</div>}
           <div>
             <label className="block text-sm font-medium text-slate-300 mb-2">Username or Email</label>
             <input 
@@ -55,8 +69,8 @@ export default function Login() {
             />
           </div>
 
-          <button type="submit" className="w-full btn-primary mt-4">
-            Sign In
+          <button type="submit" className="w-full btn-primary mt-4" disabled={loading}>
+            {loading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
       </div>
