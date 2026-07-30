@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="flat-management-system-backend.fms-communication-service.main" />
+        <module name="flat-management-system-backend.fms-complaint-service.main" />
+        <module name="flat-management-system-backend.fms-society-service.main" />
+        <module name="flat-management-system-backend.fms-discovery-server.main" />
+        <module name="flat-management-system-backend.fms-api-gateway.main" />
+        <module name="flat-management-system-backend.fms-auth-service.main" />
+        <module name="flat-management-system-backend.fms-finance-service.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="24" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="flat-management-system-backend.fms-api-gateway" options="-parameters" />
+      <module name="flat-management-system-backend.fms-api-gateway.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-api-gateway.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-auth-service" options="-parameters" />
+      <module name="flat-management-system-backend.fms-auth-service.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-auth-service.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-communication-service" options="-parameters" />
+      <module name="flat-management-system-backend.fms-communication-service.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-communication-service.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-complaint-service" options="-parameters" />
+      <module name="flat-management-system-backend.fms-complaint-service.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-complaint-service.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-discovery-server" options="-parameters" />
+      <module name="flat-management-system-backend.fms-discovery-server.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-discovery-server.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-finance-service" options="-parameters" />
+      <module name="flat-management-system-backend.fms-finance-service.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-finance-service.test" options="-parameters" />
+      <module name="flat-management-system-backend.fms-society-service" options="-parameters" />
+      <module name="flat-management-system-backend.fms-society-service.main" options="-parameters" />
+      <module name="flat-management-system-backend.fms-society-service.test" options="-parameters" />
+    </option>
+  </component>
+</project>
